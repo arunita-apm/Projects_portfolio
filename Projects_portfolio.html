@@ -1,0 +1,98 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Syne:wght@500;600&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', var(--font-sans); }
+.wrap { padding: 1.5rem 0; display: flex; flex-direction: column; gap: 14px; }
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1.25rem; display: flex; gap: 16px; align-items: flex-start; }
+.card-featured { border: 2px solid var(--color-border-info); padding: 1.5rem; }
+.icon { width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 20px; }
+.icon-fin { background: #FAEEDA; }
+.icon-med { background: #E1F5EE; }
+.icon-voice { background: #EEEDFE; }
+.body { flex: 1; }
+.top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.title { font-family: 'Syne', var(--font-sans); font-size: 16px; font-weight: 600; color: var(--color-text-primary); }
+.title-featured { font-size: 18px; }
+.badge { font-size: 11px; font-weight: 500; padding: 2px 9px; border-radius: 20px; }
+.b-built { background: #E1F5EE; color: #0F6E56; }
+.b-wip { background: #E6F1FB; color: #185FA5; }
+.b-featured { background: var(--color-background-info); color: var(--color-text-info); font-size: 11px; font-weight: 500; padding: 2px 9px; border-radius: 20px; }
+.desc { font-size: 13.5px; color: var(--color-text-secondary); line-height: 1.65; margin-bottom: 12px; }
+.desc-featured { font-size: 14px; }
+.pills { display: flex; flex-wrap: wrap; gap: 6px; }
+.pill { font-size: 11px; padding: 3px 9px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); color: var(--color-text-secondary); }
+.status-bar { display: flex; gap: 8px; align-items: center; margin-top: 10px; font-size: 12px; color: var(--color-text-tertiary); }
+.dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.dot-green { background: #1D9E75; }
+.dot-blue { background: #378ADD; }
+.dot-amber { background: #BA7517; }
+.highlight-row { display: flex; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.highlight { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 14px; flex: 1; min-width: 120px; }
+.h-label { font-size: 11px; color: var(--color-text-tertiary); margin-bottom: 2px; }
+.h-val { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+</style>
+<div class="wrap">
+
+<div class="card card-featured">
+  <div class="icon icon-fin">💸</div>
+  <div class="body">
+    <div class="top">
+      <span class="title title-featured">Rupee Flow</span>
+      <span class="b-featured">Featured</span>
+      <span class="badge b-wip">In Progress</span>
+    </div>
+    <p class="desc desc-featured">A finance tracker built for students and early-career professionals who just want to understand where their money goes. Reads bank SMS automatically, categorises spending by platform, time, intent and transaction type, then gives smart AI advice — like a financially savvy friend, not a stock broker.</p>
+    <div class="highlight-row">
+      <div class="highlight"><div class="h-label">Target users</div><div class="h-val">Students & early professionals</div></div>
+      <div class="highlight"><div class="h-label">AI layer</div><div class="h-val">Claude API chatbot</div></div>
+      <div class="highlight"><div class="h-label">Bank sync</div><div class="h-val">Setu (RBI-approved)</div></div>
+    </div>
+    <div class="pills">
+      <span class="pill">React + TypeScript</span>
+      <span class="pill">Claude API</span>
+      <span class="pill">FlutterFlow (Android)</span>
+      <span class="pill">Setu Account Aggregator</span>
+      <span class="pill">Firebase Auth + FCM</span>
+      <span class="pill">Supabase</span>
+    </div>
+    <div class="status-bar"><div class="dot dot-blue"></div>Frontend complete · backend in progress</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="icon icon-med">💊</div>
+  <div class="body">
+    <div class="top">
+      <span class="title">Medication Tracker</span>
+      <span class="badge b-built">Built</span>
+    </div>
+    <p class="desc">An app that speaks reminders aloud so patients can't ignore them. Includes a hands-free voice agent to schedule meds, caregiver alerts when doses are missed, and weekly email reports.</p>
+    <div class="pills">
+      <span class="pill">React + TypeScript</span>
+      <span class="pill">Supabase</span>
+      <span class="pill">Firebase FCM</span>
+      <span class="pill">Capacitor (Android)</span>
+      <span class="pill">Google OAuth</span>
+    </div>
+    <div class="status-bar"><div class="dot dot-green"></div>B2C + B2B (clinics, pharmacies, insurers)</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="icon icon-voice">🎙️</div>
+  <div class="body">
+    <div class="top">
+      <span class="title">VoiceFlow</span>
+      <span class="badge b-built">Built</span>
+    </div>
+    <p class="desc">A multilingual, mood-aware voice assistant for e-commerce. Remembers past purchases and style preferences, handles product discovery, comparison, and post-purchase support — entirely hands-free.</p>
+    <div class="pills">
+      <span class="pill">Voice AI</span>
+      <span class="pill">Multilingual NLP</span>
+      <span class="pill">E-commerce integration</span>
+    </div>
+    <div class="status-bar"><div class="dot dot-green"></div>B2C direct + B2B API integration</div>
+  </div>
+</div>
+
+</div>
